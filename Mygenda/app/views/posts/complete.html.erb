@@ -1,0 +1,28 @@
+<h1>Completed Tasks</h1>
+
+<% @posts.each do |post| %>
+  <div class = "card text-center">
+    <div class="card-header">
+      <h3><!--Title: --><%= link_to post.title.capitalize, post%> <!--(Priority: <%=post.priority %>)--></h3>
+    </div>
+
+    <div class="card-body">
+      <p class="card-text"> 
+        <%= post.body %>
+      </p>
+
+      <!--We need to work on the inserting the row of data into the completed table first and then deleting the row in TODO-->
+      
+      <div class="btn btn-primary">
+        <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </div>
+    </div>
+
+    <div class="card-footer text-muted">
+        <strong>Created on: </strong><%= post.created_at.strftime("%Y-%m-%d") %> 
+        <strong>Due Date: </strong><%= post.due_date %>
+    </div>
+  </div>
+  <br>
+  <br>
+<% end %>

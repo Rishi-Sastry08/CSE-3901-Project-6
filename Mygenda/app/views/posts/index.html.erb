@@ -1,0 +1,73 @@
+<!--
+File Description: This is the page that displays all To Do Posts
+
+Edited on 11/20/2019 by Emily Zeaman - "added create new post button, control buttons for filter"
+
+-->
+
+<div>
+  <br>
+  <h1>TO-DO Tasks
+    <!--
+    <div class="btn btn-outline-dark" style="font-weight: bold; font-size: 25px">
+      <%= link_to 'Create New Task', new_post_path %> 
+    </div> 
+    -->
+  </h1>
+<div>
+
+<!-- Control buttons for Filter by Category. Created by Emily Zeaman on 11/20/2019 -->
+
+<div id="filter"> 
+  <form action="/posts" method="get">
+    <select class="browser-default custom-select" name="category" id="post_category">
+      <option value="" selected disabled>Please select category:</option>
+      <option value="Home">Home</option>
+      <option value="Work">Work</option>
+      <option value="School">School</option>
+      <option value="Other">Other</option>
+    </select>
+    <button id="filter-button" class="btn btn-primary" type="submit">Apply Filter</button>
+  </form>
+
+</div>
+
+<!-- Created by Abilash Bodapati on 11/19/2019 - Added styling to the page using bootstrap
+    Edited by Emily Zeaman on 11/20/2019 - Moved button styling to CSS file
+-->
+
+<br>
+<br>
+
+
+<% @post.each do |post| %>
+  <div class = "card text-center">
+    <div class="card-header">
+      <h3><!--Title: --><%= link_to post.title.capitalize, post%> <!--(Priority: <%=post.priority %>)--></h3>
+    </div>
+
+    <div class="card-body">
+      <p class="card-text"> 
+        <%= post.body %>
+      </p>
+
+      <div class="btn btn-primary">
+        <%= link_to 'Mark as Completed', post_complete_path(:param1 => post.id), data: { confirm: 'Are you sure you completed the task?'} %>
+      </div>
+      
+      <div class="btn btn-primary">
+        <%= link_to 'Edit', edit_post_path(post) %>
+      </div>
+      <div class="btn btn-primary">
+        <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </div>
+    </div>
+
+    <div class="card-footer text-muted">
+        <strong>Created on: </strong><%= post.created_at.strftime("%Y-%m-%d") %> 
+        <strong>Due Date: </strong><%= post.due_date %>
+    </div>
+  </div>
+  <br>
+  <br>
+<% end %>

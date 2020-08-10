@@ -1,0 +1,23 @@
+<!--
+
+File Description: Side Navigation Bar
+
+
+Created by Bhagwat Sapkota on 11/18/2019 - "added sidebar"
+
+-->
+
+<div id="sidebar">
+    <div class="toggle" onclick="sbar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul>
+        <li class="sidebar_to_do"><%= link_to "Home", '/' %></li>
+        <li class="sidebar_to_do"><%= link_to "Create New Task", new_post_path %></li>
+        <li class="sidebar_to_do"><%= link_to "To Do List", posts_path %></li>
+        <li class="sidebar_complete"><%= link_to "Completed Tasks", post_complete_path  %></li>
+        <li class="sidebar_to_do"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+    </ul>
+</div>

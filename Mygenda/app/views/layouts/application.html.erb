@@ -1,0 +1,53 @@
+<!--
+
+File Description: main layout
+
+
+Edited by Emily Zeaman on 11/18/2019 - "added bootstrap reference links"
+Edited by Bhagwat Sapkota on 11/19/2019 - "Added rendering for sidebar"
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mygenda</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+
+
+  </head>
+
+  <body>
+  
+
+    <!-- took out the alerts bc they messed up the style hard but we should figure out how to include them in a good way -->
+    <% if current_user%>
+      <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span4"><%= render 'layouts/sidebar' %></div>
+            <div class="span8"><%= yield %></div>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
+
+    <script type="text/javascript">
+    //auto expand textarea
+    function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+}
+</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

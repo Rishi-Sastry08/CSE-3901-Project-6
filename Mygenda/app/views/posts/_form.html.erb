@@ -1,0 +1,51 @@
+<!--
+File Description: Form for creating a new task.
+
+Edited by Emily Zeaman on 11/20/2019 - "added category field with options of home, work, school, other"
+-->
+
+
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %><br/>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %><br/>
+    <%= form.text_area :body %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :priority %><br/>
+    <%= form.number_field :priority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %><br/>
+    <%= form.select :category, ["Home", "School", "Work", "Other"],{}, {class: "browser-default custom-select"}%>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :due_date %><br/>
+    <%= form.date_field :due_date, as: :date, value: form.object.try(:strftime,"%m/%d/%Y") %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit", class: "btn btn-primary", id:"login-button"%>
+  </div>
+<% end %>

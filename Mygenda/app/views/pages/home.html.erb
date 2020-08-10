@@ -1,0 +1,64 @@
+<!--
+File Decsription: This is the landing page when getting to the application or after signing in.
+
+Created by Abilash Bodapati
+Edited by Pradhit Gosula on 11/15/2019 - added code to show dashboard when signed in
+Edited by Emily Zeaman on 11/18/2019 - "added link to completed tasks page"
+Edited by Emily Zeaman on 11/20/2019 - added create a new task button
+-->
+
+<% if current_user %>
+    <div class = "home">
+
+        <div class = "createTaskButton">
+        <br>
+        <div>
+        <h1>Hi <%= current_user.first_name %>! </h1>
+        <h3> Due This Week: </h3>
+        <br/>
+        <div class = "post-body">
+            <% @posts.each do |post| %>
+                <% if post.completed == false%>
+                    <div class="dashboard-cards">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Due Date: <%= post.due_date%></h5>
+                                <p class="card-text"><%= link_to post.title, post %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+
+<% else %>
+    <!-- This is the landing page --> 
+    <!-- Created by Abilash Bodapati -->
+        <div class="container">
+
+            <div class="content">
+                <div class="welcome">
+                    <p>
+                        <h1>WELCOME TO MYGENDA</h1>
+                    </p>
+
+                </div>
+
+                <div class="small_info">
+                    <p>
+                        This is where we write a small elevator pitch style about the web-app!
+                    </p>
+                </div>
+
+                <div class="buttons">
+                    <button class="login" type='button'><%= link_to "Log In",new_user_session_path%></button>
+                    <button class="signup" type='button'><%= link_to "Sign Up",new_user_registration_path %></button>
+                </div>
+            </div>
+
+        </div>
+
+<% end %>

@@ -1,0 +1,483 @@
+/*
+ * File Description: This is the styling for our application and is divided into page styling.
+ *  
+ *  Color Palette Reference:
+ *
+ *      .dark-primary-color    { background: #455A64; }
+ *      .default-primary-color { background: #607D8B; }
+ *      .light-primary-color   { background: #CFD8DC; }
+ *      .text-primary-color    { color: #FFFFFF; }
+ *      .accent-color          { background: #9E9E9E; }
+ *      .primary-text-color    { color: #212121; }
+ *      .secondary-text-color  { color: #757575; }
+ *      .divider-color         { border-color: #BDBDBD; }
+ *
+ */
+
+
+
+/* Filter Styling
+ * Created by Emily Zeaman
+*/
+
+
+#filter input{
+    width: 200px;
+    height: 100px;
+    color: black;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 10;
+}
+
+
+select #search{
+    padding: 50px;
+}
+
+#filter #filter-form{
+  height: 20px;
+}
+ /* Site Wide Styling
+  * Created by Emily Zeaman
+  */
+
+
+ .login-form, .signup-form{
+     padding: 10px;
+ }
+
+a{
+    color: rgb(41, 54, 59);
+}
+
+ a:hover{
+    text-decoration: none;
+    font-weight:50;
+
+ }
+
+ h1{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 31px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    color: #CFD8DC; 
+    margin-left: 500px;
+ }
+
+ h2{
+    font-family: Tahoma, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+    word-spacing: 2.2px;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: none;
+    color: rgb(41, 54, 59);
+    text-align: center;
+    border: rgb(41, 54, 59), 5px;
+    border-radius: 5px;
+
+ }
+
+ body {
+    background: linear-gradient(to right,rgb(48, 207, 160), rgb(64, 143, 132), #2C5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #CFD8DC;
+    margin: 100px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 30px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+  }
+
+  p{
+    color: #CFD8DC;
+    margin-top: 100px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 30px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 18px;
+    padding: 15px;
+  }
+  
+  
+  pre {
+    padding: 10px;
+  }
+  
+  th {
+    padding-bottom: 5px;
+  }
+  
+  td {
+    padding: 0 5px 7px;
+  }
+  
+  
+  #notice {
+    color: green;
+  }
+  
+  .field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+  }
+  
+  #error_explanation {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px 7px 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  label {
+    display: block;
+  }
+
+  a .btn{
+      color: white !important;
+  }
+
+    /* Card Styling
+  * Created by Emily Zeaman on 11/20/2019
+  * Edited by Abilash Bodapati on 11/22/2019 - The width and margin in previous code base is what is giving the distorted size. 
+  */
+
+  .card{
+      background-color: transparent;
+      /*width: 600px;*/
+      margin: 0px 500px;
+  }
+  .btn-primary{
+    font-weight: bold; 
+    font-size: 18px;
+    color: rgb(41, 54, 59);
+  }
+  .card-text{
+    line-height: 1.6;
+  }
+  .card-footer{
+    font-size: 15pt;
+  }
+
+  /* Dashboard Styling
+  * Created by Emily Zeaman on 11/30/2019
+  */
+
+  .home{
+    color: #CFD8DC;
+    margin: 0px;
+    margin-left: 100px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 45px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 18px;
+
+  }
+  .dashboard-cards > .card{
+    margin: 0px 150px;
+  }
+
+   /* Form Styling
+    * Created by Emily Zeaman on 11/30/2019
+    */
+
+form{
+    background-color: transparent;
+    color: #CFD8DC;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 20px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 18px;
+}
+
+.field{
+    background-color: transparent;
+    color: #CFD8DC;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 30px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 18px;
+    margin: 20px;
+    padding: 10px;
+
+}
+
+label .field{
+    font-size: 40px;
+}
+
+input[type="submit"]{
+    background: linear-gradient(to right, #CFD8DC,  #CFD8DC, #CFD8DC );
+    border-color: lightgrey;
+}
+
+input:focus{
+    border: 5px solid #CFD8DC;;
+  }
+
+textarea{
+    font-style: italic;
+	padding: 0px 0px 0px 0px;
+	background: #325f73;
+    width: 500px;
+    height: 100px;
+    margin: 50px;
+	overflow: hidden;
+	resize:none;
+    color:  #CFD8DC;
+}
+
+textarea:focus{
+    border: 5px solid #CFD8DC;  
+}
+
+input{
+    background-color:#325f73;
+    color: #CFD8DC;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15px;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    line-height: 18px;
+    margin: 20px;
+    padding:20px;
+    border: solid, 2px;
+    width: 500px;
+    height: 500px;
+}
+
+
+  /* Side Nav Bar 
+   * Created by Bhagwat Sapkota
+   * Edited by Emily Zeaman on 11/20/2019 - "added color palette and fonts, added hover styling"
+   */
+
+ #sidebar {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: -1.2px;
+    word-spacing: 1px;
+    font-weight: 500;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    position: fixed;
+    widows: 200px;
+    height:100%;
+    background: #325f73;
+    left: -250px;
+    transition: all 200ms linear;
+ }
+
+ #sidebar.active {
+     left: 0px;
+ }
+
+ #sidebar ul li {
+    color: #607D8B; 
+    font-size: 25px;
+    list-style: none;
+    padding:15px 10px;
+    border-bottom: 1px;
+ }
+
+ #sidebar a {
+     color: #CFD8DC;
+ }
+
+ #sidebar a:hover{
+    color: #CFD8DC;
+    font-style: oblique;
+    text-decoration: none;
+    font-weight: 2000;
+ }
+
+ #sidebar .toggle {
+     position: absolute;
+     left: 270px;
+     top: 20px;
+ }
+
+ #sidebar .toggle span{
+    display:block;
+    width: 30px;
+    height: 5px;
+    background:#48829c;
+    margin: 5px 5px;
+ }
+
+ /* Landing Page
+  * Created by Abilash Bodapati
+  */
+
+ .body{
+    background-image: url("landingpage-no-logo.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner{
+    background-color: rgb(3, 66, 66);
+    width: 100%;
+    height: 100px;
+    opacity: 0.82;
+}
+.container {
+    text-align: center;
+}
+.flex-container {
+    display: flex;
+}
+td, th {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.welcome {
+    color: white;
+    margin: 100px;
+}
+.small_info {
+    font-size: 18pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.buttons{
+    margin: 100px;
+}
+.buttons .login, .buttons .signup {
+    width: 300px;
+    height: 50px;
+    font-size: 15pt;
+}
+a#back-button.btn.btn-primary{
+  width: 100px;
+  height: 50px;
+  font-size: 15pt;
+  color: #009688;
+  background: #CFD8DC;
+}
+button#filter-button.btn.btn-primary{
+  width: 100px;
+  height: 50px;
+  font-size: 15pt;
+  color: #CFD8DC; 
+}
+
+select#post_category.browser-default.custom-select{
+  width: 300px;
+}
+
+select#post_category.browser-default.custom-select {
+  text-align: center;
+  line-height: 1;
+}
+.post-body a{
+    text-decoration: none !important;
+    color: black;
+}
+
+
+input#login-button.btn.btn-primary{
+  width: 100px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+input#forgot-button.btn.btn-primary{
+  width: 400px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+input#signup-button.btn.btn-primary{
+  width: 100px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+input#user_remember_me{
+  width: 10px;
+  height: 10px;
+}
+
+.content{
+  text-align: center;
+}
+
+
+.login-form{
+  text-align: center;
+  margin-top: 15%;
+}
+
+.signup-form{
+  text-align: center;
+}
+.login-header{
+  color:white
+}
+
+.jumbo-header{
+  margin: 0px;
+}
+
+input#user_email,input#user_password_confirmation.form-control.mb-4,input#user_first_name,input#user_last_name, input#post_priority, input#post_title, input#user_email.form-control.mb-4,input#user_password.form-control.mb-4{
+  width: 500px;
+  height: 50px;
+  margin: 0 auto; 
+  color:white;
+  padding: 0px;
+}
+
+input#post_due_date{
+  width: 300px;
+  height: 50px;
+  line-height: 0.8;
+}
+
+
+textarea#post_body{
+  line-height: 1.2; 
+}
+#create-task-button{
+  color:white; 
+  font-weight: bold; 
+  font-size: 25px
+}
+
+
+.new-edit-form{
+  text-align: center;
+}
+
+
+.show-page-body{
+  text-align: center;
+}
+
+.super-link{
+  color: white
+}
+
+.forgot-pass-body{
+  text-align: center; 
+  margin-top: 5%; 
+}

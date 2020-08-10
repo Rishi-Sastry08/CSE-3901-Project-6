@@ -1,0 +1,59 @@
+<!--
+<div class="show-page-body">
+  <p>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </p>
+
+  <p>
+    <strong>Due date:</strong>
+    <%= @post.due_date %>
+  </p>
+
+  <p>
+    <strong>Task:</strong>
+    <%= @post.body %>
+  </p>
+
+  <p>
+    <strong>Priority:</strong>
+    <%= @post.priority %>
+  </p>
+
+   <p>
+    <strong>Category:</strong>
+    <%= @post.category%>
+  </p>
+
+  <div class="btn btn-outline-dark" style="font-weight: bold; font-size: 25px; color: navy;">
+  <%= link_to 'Edit', edit_post_path(@post), class: "super-link" %> 
+</div>
+-->
+<br>
+<div>
+  <h1>
+    Details
+  </h1>
+</div>
+<br>
+
+<div class="show-page-body">
+  <div class="card">
+    
+    <h3 class="card-header"><%= @post.title.capitalize%> </h3>
+      <div class="card-body">
+    <h5 class="card-title">Priority: <%=@post.priority %></h5>
+    <p class="card-text"><%= @post.body %></p>
+    <div class="btn btn-primary">
+      <%= link_to 'Edit', edit_post_path(@post) %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }%>
+    </div>
+    
+  </div> 
+</div>
+
+<br>
+
+<%= link_to 'Back', posts_path, id: "back-button", class: "btn btn-primary"%> 

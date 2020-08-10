@@ -1,0 +1,38 @@
+Description: This is the test plan for our project that describes how completed both Unit Testing and Integration Testing.
+
+Author(s):
+
+Created by Bhagwat Sapkota on 11/22/2019
+
+
+Unit Testing:
+
+* Each unit was tested by verifying whether it performs its respective function or not when we did the integration testing. * Each individual module was tested.
+* We tested these functions when they were originally created by the respective team member
+
+   We opened all .html.erb file in browser and check if the information needed is there or not.
+   Also, we verify that all the buttons required for routing were present in each.
+
+Integration Testing:
+
+    //stylesheet.css
+
+    We opened all .html.erb files and verified that our styling looked correct with the HTML elements.
+
+    //routing
+    After integration we opened our project in web server using rails server and tested our routes.
+    We checked if we could go from home to to-do list page, completed task page, or create new task page.
+    Then we tested if we can go back to Home page from all the pages that had route to home.
+    Eventually we tested if we could get to every single page from one page directly or indirectly.
+
+    //Functionality testing 
+    For functionality testing we tried to delete the tasks after creating it to see whether we can delete or not.
+    Also we tested if "create new task" would give us empty form to fill or not. Similarly we tested if edit would give us the form already filled.
+    In the form fill page we tested by entering different inputs to see if the constraints work or not.
+    We also checked when we mark the task completed, did the task went to completed task page. 
+    Finally we checked if we could filter the to-do list to only show the task on that category.
+
+System Testing:
+
+Once we had all the functionality completed and project was ready, the team spent hours trying to break the code by routing to different 
+pages, putting wrong inputs to see if it would take that input, and if the tasks were in corerect places or not. We completed the system testing.
